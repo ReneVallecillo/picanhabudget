@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Devise for user Auth
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,6 +45,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
+  gem 'rails_layout'
 end
 
 group :test do
