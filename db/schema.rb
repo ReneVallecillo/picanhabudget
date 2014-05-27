@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526235426) do
+ActiveRecord::Schema.define(version: 20140527020925) do
+
+  create_table "subscriptions", force: true do |t|
+    t.string   "name"
+    t.string   "lastname"
+    t.integer  "grade_id"
+    t.integer  "section_id"
+    t.integer  "level_id"
+    t.integer  "paymentmethod_id"
+    t.integer  "school_id"
+    t.boolean  "active"
+    t.date     "fechaingreso"
+    t.date     "fechainactivo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

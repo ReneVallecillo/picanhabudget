@@ -3,13 +3,12 @@ class CreateSubscriptions < ActiveRecord::Migration
     create_table :subscriptions do |t|
       t.string :name
       t.string :lastname
-      t.string :grade
-      t.string :section, limit: 1
-      t.string :level
-      t.string :paymentmethod
-      t.string :school
+      t.integer :grade_id
+      t.integer :section_id
+      t.integer :level_id
+      t.integer :paymentmethod_id
+      t.integer :school_id
       t.boolean :active
-      t.string :location
       t.date :fechaingreso
       t.date :fechainactivo
 

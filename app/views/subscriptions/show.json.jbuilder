@@ -1,1 +1,1 @@
-json.extract! @subscription, :id, :name, :lastname, :grade, :section, :level, :paymentmethod, :school, :active, :location, :fechaingreso, :fechainactivo, :created_at, :updated_at
+json.extract! @subscription, :id, :name, :lastname, :grade_id, :section_id, :level_id, :paymentmethod_id, :school_id, :active, :fechaingreso, :fechainactivo, :created_at, :updated_at

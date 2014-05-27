@@ -5,13 +5,12 @@ describe "subscriptions/edit" do
     @subscription = assign(:subscription, stub_model(Subscription,
       :name => "MyString",
       :lastname => "MyString",
-      :grade => "MyString",
-      :section => "MyString",
-      :level => "MyString",
-      :paymentmethod => "MyString",
-      :school => "MyString",
-      :active => false,
-      :location => "MyString"
+      :grade_id => 1,
+      :section_id => 1,
+      :level_id => 1,
+      :paymentmethod_id => 1,
+      :school_id => 1,
+      :active => false
     ))
   end
 
@@ -22,13 +21,12 @@ describe "subscriptions/edit" do
     assert_select "form[action=?][method=?]", subscription_path(@subscription), "post" do
       assert_select "input#subscription_name[name=?]", "subscription[name]"
       assert_select "input#subscription_lastname[name=?]", "subscription[lastname]"
-      assert_select "input#subscription_grade[name=?]", "subscription[grade]"
-      assert_select "input#subscription_section[name=?]", "subscription[section]"
-      assert_select "input#subscription_level[name=?]", "subscription[level]"
-      assert_select "input#subscription_paymentmethod[name=?]", "subscription[paymentmethod]"
-      assert_select "input#subscription_school[name=?]", "subscription[school]"
+      assert_select "input#subscription_grade_id[name=?]", "subscription[grade_id]"
+      assert_select "input#subscription_section_id[name=?]", "subscription[section_id]"
+      assert_select "input#subscription_level_id[name=?]", "subscription[level_id]"
+      assert_select "input#subscription_paymentmethod_id[name=?]", "subscription[paymentmethod_id]"
+      assert_select "input#subscription_school_id[name=?]", "subscription[school_id]"
       assert_select "input#subscription_active[name=?]", "subscription[active]"
-      assert_select "input#subscription_location[name=?]", "subscription[location]"
     end
   end
 end

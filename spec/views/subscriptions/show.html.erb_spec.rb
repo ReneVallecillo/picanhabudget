@@ -5,13 +5,12 @@ describe "subscriptions/show" do
     @subscription = assign(:subscription, stub_model(Subscription,
       :name => "Name",
       :lastname => "Lastname",
-      :grade => "Grade",
-      :section => "Section",
-      :level => "Level",
-      :paymentmethod => "Paymentmethod",
-      :school => "School",
-      :active => false,
-      :location => "Location"
+      :grade_id => 1,
+      :section_id => 2,
+      :level_id => 3,
+      :paymentmethod_id => 4,
+      :school_id => 5,
+      :active => false
     ))
   end
 
@@ -20,12 +19,11 @@ describe "subscriptions/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Name/)
     rendered.should match(/Lastname/)
-    rendered.should match(/Grade/)
-    rendered.should match(/Section/)
-    rendered.should match(/Level/)
-    rendered.should match(/Paymentmethod/)
-    rendered.should match(/School/)
+    rendered.should match(/1/)
+    rendered.should match(/2/)
+    rendered.should match(/3/)
+    rendered.should match(/4/)
+    rendered.should match(/5/)
     rendered.should match(/false/)
-    rendered.should match(/Location/)
   end
 end

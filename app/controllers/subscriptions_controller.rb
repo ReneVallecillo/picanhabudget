@@ -69,6 +69,6 @@ class SubscriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      params.require(:subscription).permit(:name, :lastname, :grade, :section, :level, :paymentmethod, :school, :active, :location, :fechaingreso, :fechainactivo)
+      params.require(:subscription).permit(:name, :lastname, :grade_id, :section_id, :level_id, :paymentmethod_id, :school_id, :active, :fechaingreso, :fechainactivo)
     end
 end

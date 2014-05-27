@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to new_level_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Level
+  <% end %>
+  <h1>Listing levels</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @levels) do |level| %>
+            <td><%= level.name %></td>
+            <td><%= link_to 'Show', level %></td>
+        <td><%= link_to 'Edit', edit_level_path(level) %></td>
+        <td><%= link_to 'Destroy', level, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
