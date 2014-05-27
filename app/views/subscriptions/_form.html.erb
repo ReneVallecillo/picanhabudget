@@ -1,0 +1,86 @@
+<%= form_for(@subscription, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @subscription.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@subscription.errors.count, "error") %> prohibited this subscription from being saved:</h4>
+
+      <ul>
+      <% @subscription.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :lastname, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :lastname, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :grade, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :grade, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :section, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :section, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :level, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :level, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :paymentmethod, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :paymentmethod, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :school, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :school, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :active, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.check_box :active, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :location, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fechaingreso, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :fechaingreso, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fechainactivo, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :fechainactivo, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

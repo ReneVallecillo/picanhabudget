@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to subscriptions_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_subscription_path(@subscription), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show subscription</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @subscription.name %></dd>
+
+  <dt>Lastname:</dt>
+  <dd><%= @subscription.lastname %></dd>
+
+  <dt>Grade:</dt>
+  <dd><%= @subscription.grade %></dd>
+
+  <dt>Section:</dt>
+  <dd><%= @subscription.section %></dd>
+
+  <dt>Level:</dt>
+  <dd><%= @subscription.level %></dd>
+
+  <dt>Paymentmethod:</dt>
+  <dd><%= @subscription.paymentmethod %></dd>
+
+  <dt>School:</dt>
+  <dd><%= @subscription.school %></dd>
+
+  <dt>Active:</dt>
+  <dd><%= @subscription.active %></dd>
+
+  <dt>Location:</dt>
+  <dd><%= @subscription.location %></dd>
+
+  <dt>Fechaingreso:</dt>
+  <dd><%= @subscription.fechaingreso %></dd>
+
+  <dt>Fechainactivo:</dt>
+  <dd><%= @subscription.fechainactivo %></dd>
+
+</dl>

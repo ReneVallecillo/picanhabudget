@@ -1,0 +1,49 @@
+<div class="page-header">
+  <%= link_to new_subscription_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Subscription
+  <% end %>
+  <h1>Listing subscriptions</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Grade</th>
+            <th>Section</th>
+            <th>Level</th>
+            <th>Paymentmethod</th>
+            <th>School</th>
+            <th>Active</th>
+            <th>Location</th>
+            <th>Fechaingreso</th>
+            <th>Fechainactivo</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @subscriptions) do |subscription| %>
+            <td><%= subscription.name %></td>
+            <td><%= subscription.lastname %></td>
+            <td><%= subscription.grade %></td>
+            <td><%= subscription.section %></td>
+            <td><%= subscription.level %></td>
+            <td><%= subscription.paymentmethod %></td>
+            <td><%= subscription.school %></td>
+            <td><%= subscription.active %></td>
+            <td><%= subscription.location %></td>
+            <td><%= subscription.fechaingreso %></td>
+            <td><%= subscription.fechainactivo %></td>
+            <td><%= link_to 'Show', subscription %></td>
+        <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
+        <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
