@@ -46,6 +46,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
   gem 'rails_layout'
+  gem 'bootstrap-generators', '~> 3.1.1'
 end
 
 group :test do
