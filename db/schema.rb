@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140530011852) do
+ActiveRecord::Schema.define(version: 20140530031654) do
 
   create_table "grades", force: true do |t|
     t.string   "name"
@@ -53,10 +53,9 @@ ActiveRecord::Schema.define(version: 20140530011852) do
   create_table "subscriptions", force: true do |t|
     t.string   "name"
     t.string   "lastname"
-    t.integer  "grade_id"
     t.integer  "section_id"
     t.integer  "level_id"
-    t.integer  "paymentmethod_id"
+    t.integer  "payment_method_id"
     t.integer  "school_id"
     t.boolean  "active"
     t.date     "fechaingreso"
