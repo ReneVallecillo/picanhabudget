@@ -12,7 +12,6 @@
       <tr>
             <th>Name</th>
             <th>Lastname</th>
-            <th>Grade</th>
             <th>Section</th>
             <th>Level</th>
             <th>Paymentmethod</th>
@@ -30,11 +29,10 @@
       <%= content_tag_for(:tr, @subscriptions) do |subscription| %>
             <td><%= subscription.name %></td>
             <td><%= subscription.lastname %></td>
-            <td><%= subscription.grade_id %></td>
-            <td><%= subscription.section_id %></td>
-            <td><%= subscription.level_id %></td>
-            <td><%= subscription.paymentmethod_id %></td>
-            <td><%= subscription.school_id %></td>
+            <td><%= subscription.section.name if subscription.section %></td>
+            <td><%= subscription.level.name if subscription.level %></td>
+            <td><%= subscription.payment_method.name if subscription.payment_method %></td>
+            <td><%= subscription.school.name %></td>
             <td><%= subscription.active %></td>
             <td><%= subscription.fechaingreso %></td>
             <td><%= subscription.fechainactivo %></td>
