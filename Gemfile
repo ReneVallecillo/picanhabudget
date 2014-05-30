@@ -47,6 +47,7 @@ group :development, :test do
   gem 'rspec-rails', '2.13.1'
   gem 'rails_layout'
   gem 'bootstrap-generators', '~> 3.1.1'
+  gem 'annotate'
 end
 
 group :test do
