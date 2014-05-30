@@ -17,20 +17,20 @@ schoolings = Schooling.create([{name: 'Preescolar'},{name: 'Primaria'},
 puts 'Created Schooling'
 
 levels = Level.create([
-    { name: 'I nivel',schooling:schoolings.first},
-    { name: 'II nivel', schooling:schoolings.first},
-    { name: 'III nivel',schooling:schoolings.first},
-    { name: '1er grado',schooling:schoolings[1] },
-    { name: '2do grado',schooling:schoolings[1] },
-    { name: '3er grado',schooling:schoolings[1] },
-    { name: '4to grado',schooling:schoolings[1] },
-    { name: '5to grado',schooling:schoolings[1] },
-    { name: '6to grado',schooling:schoolings[1] },
-    { name: '1er año',schooling:schoolings.last },
-    { name: '2do año',schooling:schoolings.last },
-    { name: '3er año',schooling:schoolings.last },
-    { name: '4to año',schooling:schoolings.last },
-    { name: '5to año',schooling:schoolings.last }
+    { name: 'I Nivel',schooling:schoolings.first},
+    { name: 'II Nivel', schooling:schoolings.first},
+    { name: 'III Nivel',schooling:schoolings.first},
+    { name: '1er Grado',schooling:schoolings[1] },
+    { name: '2do Grado',schooling:schoolings[1] },
+    { name: '3er Grado',schooling:schoolings[1] },
+    { name: '4to Grado',schooling:schoolings[1] },
+    { name: '5to Grado',schooling:schoolings[1] },
+    { name: '6to Grado',schooling:schoolings[1] },
+    { name: '1er Año',schooling:schoolings.last },
+    { name: '2do Año',schooling:schoolings.last },
+    { name: '3er Año',schooling:schoolings.last },
+    { name: '4to Año',schooling:schoolings.last },
+    { name: '5to Año',schooling:schoolings.last }
   ])
 puts 'Created Levels'
 
